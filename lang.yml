@@ -1,0 +1,116 @@
+Prefix: "&7[&bUpgradablesPets&7]"
+HelpMenu:
+  header: "&7&m-+-+-+-&r &c&lUpgradablesPets &7&m-+-+-+-"
+  footer: "             &c&m-----+--+-----"
+  users:
+  - ""
+  - "&b/pet help &7-> &6Shows subcommands"
+  - "&b/pet gui &7-> &6Open the Gui"
+  - "&b/pet name <name> &7-> &6Rename your pet"
+  - "&b/pet here &7-> &6Teleport your pet to your location"
+  - "&b/pet away &7-> &6Despawn your pet"
+  - ""
+  staff:
+  - "&7&m-+-+-+-&r &cStaff Cmds &7&m-+-+-+-"
+  - "&b/pet killall &7-> Kill all pets"
+  - ""
+## GUIs ##
+BuyPetsGui:
+  title: "&b&lBuy a Pet"
+  lores:
+  - ""
+  - "&ePrice: %price%"
+  - "&aClick to buy"
+MainGui:
+  title: "&c&lPets"
+  infoItem:
+    name: "&b%petname%&r's info"
+    lores:
+    - ""
+    - "&cPet Level: &7%level%"
+    - "&cType: &7%type%"
+  petHereItem:
+    name: "&fTeleport here %petname%"
+    lores:
+    - ""
+    - "&cTeleport here your pet"
+  petAwayItem:
+    name: "&fDespawn %petname%"
+    lores:
+    - ""
+    - "&cTeleport your pet away"
+  potions:
+    # PlaceHolders:
+    # %effect% => Effect name
+    # %price% => Effect price
+    # %current_lvl% => Current effect level
+    # %next_lvl% => The next effect level
+    name: "&b%effect% &clvl.%current_lvl%"
+    lores:
+    - ""
+    - "&ePrice: &7%price%"
+    - "&aCurrent Level: &7%current_lvl%"
+    - "&aNext Level: &7%next_lvl%"
+    maxLevelLores:
+    - ""
+    - "&bYou have maxed the %effect%&r&b effect"
+    - "&aCurrent Level: &7%current_lvl%"
+ConfirmGui:
+  title: '&aConfirm Purchase'
+  mainItem:
+    name: "&6Buy %effect%&r &6Effect &clvl.%lvl%"
+    lores:
+    - ""
+    - "&cCurrent lvl: &7%lvl%"
+    - "&aPrice: &7%price%"
+  buyItem:
+    name: "&aBuy!"
+    lores:
+    - ""
+    - "&aClick to buy"
+  backItem:
+    name: "&4Cancel"
+    lores:
+    - ""
+    - "&cClick to exit"
+# EFFECTS NAMES 
+Effects:
+  speed: "&bSpeed"
+  regeneration: "&dRegeneration"
+  fire_resistance: "&cFire Resistance"
+  night_vision: "&9Night Vision"
+  increase_damage: "&aStrength"
+  invisibility: "&7Invisibility"
+  water_breathing: "&3Water Breathing"
+  fast_digging: "&6Haste"
+# MESSAGES
+Alerts:
+  notEnoughtMoney: "&cSorry, you don't have enought money!"
+  alreadyHavePet: "&cYou already have a pet!"
+  petHere: "&aYour pet has been teleported to your location!"
+  petAway: "&cYour pet has been teleported away!"
+  petDie: "&cYour pet died"
+  petIsDeath: "&cYour pet is death, you have to wait for %delay% minutes."
+  petRespawned: "&aYour pet has been respawned!"
+  petKilled: "&cYou killed %owner%'s pet!"
+  petKilledbyPlayer: "&cYour pet has been killed by %killer%!"
+  cantHitOwnPet: "Don't hurt your pet!"
+  petBought: "You bought a %pet%&r for %cost%" 
+  potEffectBought: "You bought %effect%&r effect for %cost%"
+  hasNotPet: "&cYou don't have a pet"
+  invalidPetName: "Invalid pet name! It cannot be longer than %max_chars% characters."
+  petRenamed: "&aPet correctly renamed!"
+  effectMaxed: "&cThere are no more available levels, Max level reached"
+  petDeleted: "&c%owner%'s pet has been deleted!"
+  permissions:
+    noPerms: "&cSorry, you don't have enought permissions"
+    noChangePerms: "&cYou don't have the permissions to change your pet!"
+    noKillallPerms: "&cYou don't have the permissions to kill all the pets"
+    noDeletePerms: "&cYou don't have the permissions to delete a pet"
+    noRenamePerms: "&cYou don't have the permissions to rename your pet!"
+  staff:
+    playersCmd: "&cSorry, this command can be executed only by player."
+    petsKilledCounter: "&6%count% pets have been killed!"
+
+## Do not touch ##
+LangVersion: 1.0
