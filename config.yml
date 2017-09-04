@@ -14,6 +14,8 @@ MainSettings:
   # %lvl% => Pet level
   petNameFormat: "&b%owner%'s &6%name% &c(lvl.%lvl%)"
   maxPetNameLenght: 25
+  showPetHereMsg: true
+  showPetAwayMsg: true
   # Pet respawn delay in minutes
   petRespawnDelay: 1
 
@@ -106,6 +108,6 @@ PotionsEffects:
     active: true
     levelsCosts:
       1: 1500
-      
+
 ### DO NOT TOUCH ###
-ConfigVersion: 1.0
+ConfigVersion: 1.1
