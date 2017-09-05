@@ -19,45 +19,56 @@ MainSettings:
   # Pet respawn delay in minutes
   petRespawnDelay: 1
 
+# To buy a vip pet a player needs the permission "upgradablespets.vip.pet_to_lower_case". Example: "upgradablespets.vip.rainbow_sheep"
 PetsCost:
   Cow:
     active: true
+    forVips: false
     name: "&bCow"
     price: 500
   Pig:
     active: true
+    forVips: false
     name: "&dPig"
     price: 400
   Sheep:
     active: true
+    forVips: false
     name: "&fSheep"
     price: 450
   Chicken:
     active: true
+    forVips: false
     name: "&6Chicken"
     price: 600
   Ocelot:
     active: true
+    forVips: false
     name: "&aOcelot"
     price: 700
   Slime:
     active: true
+    forVips: false
     name: "&3Slime"
     price: 650
   Wolf:
     active: true
+    forVips: false
     name: "&7Wolf"
     price: 500
   Mushroom_cow:
     active: true
+    forVips: false
     name: "&cMushroom Cow"
     price: 800
   Silverfish:
     active: true
+    forVips: false
     name: "&7Silverfish"
     price: 1000
   Rainbow_sheep:
     active: true
+    forVips: false
     name: "&5Ra&6in&3bow &cSh&beep"
     price: 2000
 
@@ -108,6 +119,6 @@ PotionsEffects:
     active: true
     levelsCosts:
       1: 1500
-
+      
 ### DO NOT TOUCH ###
-ConfigVersion: 1.1
+ConfigVersion: 1.2
