@@ -13,6 +13,7 @@ HelpMenu:
   staff:
   - "&7&m-+-+-+-&r &cStaff Cmds &7&m-+-+-+-"
   - "&b/pet killall &7-> Kill all pets"
+  - "&b/pet count &7-> Counts all pets in the server"
   - ""
 ## GUIs ##
 BuyPetsGui:
@@ -90,7 +91,7 @@ Alerts:
   petHere: "&aYour pet has been teleported to your location!"
   petAway: "&cYour pet has been teleported away!"
   petDie: "&cYour pet died"
-  petIsDeath: "&cYour pet is death, you have to wait for %delay% minutes."
+  petIsDeath: "&cYour pet is death, it will respawn in %delay% minute(s)."
   petRespawned: "&aYour pet has been respawned!"
   petKilled: "&cYou killed %owner%'s pet!"
   petKilledbyPlayer: "&cYour pet has been killed by %killer%!"
@@ -107,11 +108,13 @@ Alerts:
     noChangePerms: "&cYou don't have the permissions to change your pet!"
     noKillallPerms: "&cYou don't have the permissions to kill all the pets"
     noDeletePerms: "&cYou don't have the permissions to delete a pet"
+    noCountPerms: "&cYou don't have the permissions to count all online pets"
     noRenamePerms: "&cYou don't have the permissions to rename your pet!"
     noVip: "&cYou don't have the permission to buy the pet %pet%&c, it's only for vips!"
   staff:
     playersCmd: "&cSorry, this command can be executed only by player."
-    petsKilledCounter: "&6%count% pets have been killed!"
+    petsKilledCounter: "&b%count% &6pets have been killed!"
+    petsCounter: "&6There are &b%count% &6pets online."
 
 ## Do not touch ##
-LangVersion: 1.1
+LangVersion: 1.2
