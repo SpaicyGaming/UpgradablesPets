@@ -18,6 +18,8 @@ MainSettings:
   showPetAwayMsg: true
   # Pet respawn delay in minutes
   petRespawnDelay: 1
+  # Open gui on right click pet
+  openGuiOnRightClick: true
 
 # To buy a vip pet a player needs the permission "upgradablespets.vip.pet_to_lower_case". Example: "upgradablespets.vip.rainbow_sheep"
 PetsCost:
@@ -119,6 +121,6 @@ PotionsEffects:
     active: true
     levelsCosts:
       1: 1500
-      
+
 ### DO NOT TOUCH ###
-ConfigVersion: 1.2
+ConfigVersion: 1.3

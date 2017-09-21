@@ -46,12 +46,14 @@ MainGui:
     # %price% => Effect price
     # %current_lvl% => Current effect level
     # %next_lvl% => The next effect level
+    # %max_lvl% => The effect max level
     name: "&b%effect% &clvl.%current_lvl%"
     lores:
     - ""
     - "&ePrice: &7%price%"
     - "&aCurrent Level: &7%current_lvl%"
     - "&aNext Level: &7%next_lvl%"
+    - "&aMax Level: &7%max_lvl%"
     maxLevelLores:
     - ""
     - "&bYou have maxed the %effect%&r&b effect"
@@ -99,8 +101,8 @@ Alerts:
   petBought: "You bought a %pet%&r for %cost%"
   potEffectBought: "You bought %effect%&r effect for %cost%"
   hasNotPet: "&cYou don't have a pet"
-  invalidPetName: "Invalid pet name! It cannot be longer than %max_chars% characters."
-  petRenamed: "&aPet correctly renamed!"
+  invalidPetName: "&cInvalid pet name! It cannot be longer than %max_chars% characters."
+  petRenamed: "&aPet correctly renamed! Current name: %pet_name%"
   effectMaxed: "&cThere are no more available levels, Max level reached"
   petDeleted: "&c%owner%'s pet has been deleted!"
   permissions:
@@ -110,6 +112,7 @@ Alerts:
     noDeletePerms: "&cYou don't have the permissions to delete a pet"
     noCountPerms: "&cYou don't have the permissions to count all online pets"
     noRenamePerms: "&cYou don't have the permissions to rename your pet!"
+    noRenameFormatPerms: "&cYou don't have the permissions to use this chat format in pet's name"
     noVip: "&cYou don't have the permission to buy the pet %pet%&c, it's only for vips!"
   staff:
     playersCmd: "&cSorry, this command can be executed only by player."
@@ -117,4 +120,4 @@ Alerts:
     petsCounter: "&6There are &b%count% &6pets online."
 
 ## Do not touch ##
-LangVersion: 1.2
+LangVersion: 1.4
