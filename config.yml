@@ -14,12 +14,18 @@ MainSettings:
   # %lvl% => Pet level
   petNameFormat: "&b%owner%'s &6%name% &c(lvl.%lvl%)"
   maxPetNameLenght: 25
+
   showPetHereMsg: true
   showPetAwayMsg: true
+
   # Pet respawn delay in minutes
   petRespawnDelay: 1
+
   # Open gui on right click pet
   openGuiOnRightClick: true
+
+  # True -> Send a message when a player try to hiurt his own pet.
+  sendCantHitMessage: true
 
 # To buy a vip pet a player needs the permission "upgradablespets.vip.pet_to_lower_case". Example: "upgradablespets.vip.rainbow_sheep"
 PetsCost:
@@ -123,4 +129,4 @@ PotionsEffects:
       1: 1500
 
 ### DO NOT TOUCH ###
-ConfigVersion: 1.3
+ConfigVersion: 1.4
