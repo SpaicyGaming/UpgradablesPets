@@ -9,11 +9,17 @@ MainSettings:
   currency: "$"
   spawnPetAtJoin: true
   babyPets: true
-  # %owner% => Pet owner
-  # %name% => Pet name (default names are in the next section)
-  # %lvl% => Pet level
-  petNameFormat: "&b%owner%'s &6%name% &c(lvl.%lvl%)"
-  maxPetNameLenght: 25
+
+  petName:
+    # %owner% => Pet owner
+    # %name% => Pet name (default names are in the next section)
+    # %lvl% => Pet level
+    format: "&b%owner%'s &6%name% &c(lvl.%lvl%)"
+    maxLength: 25
+    # These words can't be used in pet's name (Bypass permission: upgradablespets.rename.bypassbl)
+    blacklistedWords:
+      - fuck
+      - whateveryouwant
 
   showPetHereMsg: true
   showPetAwayMsg: true
@@ -129,4 +135,4 @@ PotionsEffects:
       1: 1500
 
 ### DO NOT TOUCH ###
-ConfigVersion: 1.4
+ConfigVersion: 1.5
