@@ -33,6 +33,10 @@ MainSettings:
   # True -> Send a message when a player try to hiurt his own pet.
   sendCantHitMessage: true
 
+  # Players without the permission 'upgradablespets.world.*' can't use their pet in these worlds
+  blacklistedWorlds:
+    - world_without_pets
+
 # To buy a vip pet a player needs the permission "upgradablespets.vip.pet_to_lower_case". Example: "upgradablespets.vip.rainbow_sheep"
 PetsCost:
   Cow:
@@ -135,4 +139,4 @@ PotionsEffects:
       1: 1500
 
 ### DO NOT TOUCH ###
-ConfigVersion: 1.5
+ConfigVersion: 1.6
