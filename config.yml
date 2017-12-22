@@ -27,7 +27,7 @@ MainSettings:
   # Pet respawn delay in minutes
   petRespawnDelay: 1
 
-  # Open gui on right click pet
+  # Open gui on right click on pet
   openGuiOnRightClick: true
 
   # True -> Send a message when a player try to hiurt his own pet.
@@ -36,6 +36,12 @@ MainSettings:
   # Players without the permission 'upgradablespets.world.*' can't use their pet in these worlds
   blacklistedWorlds:
     - world_without_pets
+
+  Sheep:
+    # Prevent sheeps from eating grass
+    preventGrassEating: true
+    # All available colors (for 1.12.2): https://hub.spigotmc.org/javadocs/spigot/org/bukkit/DyeColor.html
+    defaultColor: WHITE
 
 # To buy a vip pet a player needs the permission "upgradablespets.vip.pet_to_lower_case". Example: "upgradablespets.vip.rainbow_sheep"
 PetsCost:
@@ -139,4 +145,4 @@ PotionsEffects:
       1: 1500
 
 ### DO NOT TOUCH ###
-ConfigVersion: 1.6
+ConfigVersion: 1.7

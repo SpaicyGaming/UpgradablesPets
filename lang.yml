@@ -101,7 +101,7 @@ Alerts:
   petKilledbyPlayer: "&cYour pet has been killed by %killer%!"
   cantHitOwnPet: "Don't hurt your pet!"
   blacklistedWorldCmd: "&cI'm sorry, pets are disabled in this world."
-  petBought: "You bought a %pet%&r for %cost%"
+  petBought: "&aYou bought a %pet%&r for &6%cost%"
   potEffectBought: "You bought %effect%&r effect for %cost%"
   hasNotPet: "&cYou don't have a pet"
   invalidPetName: "&cInvalid pet name! It cannot be longer than %max_chars% characters."
