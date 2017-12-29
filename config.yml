@@ -11,7 +11,7 @@ MainSettings:
   babyPets: true
 
   petName:
-    # %owner% => Pet owner
+    # %owner% => Pet owner name
     # %name% => Pet name (default names are in the next section)
     # %lvl% => Pet level
     format: "&b%owner%'s &6%name% &c(lvl.%lvl%)"
@@ -50,52 +50,143 @@ PetsCost:
     forVips: false
     name: "&bCow"
     price: 500
+    # You can add/remove all the levels you want, except the level "1"
+    maxHealth:
+      # The default max health
+      1:
+        value: 7.0
+      2:
+        value: 11.0
+        cost: 2000
+      3:
+        value: 15.0
+        cost: 5000
   Pig:
     active: true
     forVips: false
     name: "&dPig"
     price: 400
+    maxHealth:
+      1:
+        value: 7.0
+      2:
+        value: 11.0
+        cost: 2000
+      3:
+        value: 15.0
+        cost: 5000
   Sheep:
     active: true
     forVips: false
     name: "&fSheep"
     price: 450
+    maxHealth:
+      1:
+        value: 7.0
+      2:
+        value: 11.0
+        cost: 2000
+      3:
+        value: 15.0
+        cost: 5000
   Chicken:
     active: true
     forVips: false
     name: "&6Chicken"
     price: 600
+    maxHealth:
+      1:
+        value: 7.0
+      2:
+        value: 11.0
+        cost: 2000
+      3:
+        value: 15.0
+        cost: 5000
   Ocelot:
     active: true
     forVips: false
     name: "&aOcelot"
     price: 700
+    maxHealth:
+      1:
+        value: 10.0
+      2:
+        value: 15.0
+        cost: 2000
+      3:
+        value: 20.0
+        cost: 5000
   Slime:
     active: true
     forVips: false
     name: "&3Slime"
     price: 650
+    maxHealth:
+      1:
+        value: 7.0
+      2:
+        value: 11.0
+        cost: 2000
+      3:
+        value: 15.0
+        cost: 5000
   Wolf:
     active: true
     forVips: false
     name: "&7Wolf"
     price: 500
+    maxHealth:
+      1:
+        value: 7.0
+      2:
+        value: 11.0
+        cost: 2000
+      3:
+        value: 15.0
+        cost: 5000
   Mushroom_cow:
     active: true
     forVips: false
     name: "&cMushroom Cow"
     price: 800
+    maxHealth:
+      1:
+        value: 8.0
+      2:
+        value: 13.0
+        cost: 3000
+      3:
+        value: 17.0
+        cost: 8000
   Silverfish:
     active: true
     forVips: false
     name: "&7Silverfish"
     price: 1000
+    maxHealth:
+      1:
+        value: 5.0
+      2:
+        value: 11.0
+        cost: 4500
+      3:
+        value: 15.0
+        cost: 10000
   Rainbow_sheep:
     active: true
     forVips: false
     name: "&5Ra&6in&3bow &cSh&beep"
     price: 2000
-
+    maxHealth:
+      1:
+        value: 12.0
+      2:
+        value: 15.0
+        cost: 8000
+      3:
+        value: 20.0
+        cost: 14000
 #
 # POTIONS EFFECTS
 # YOU CAN DELETE AND ADD LEVELS
@@ -145,4 +236,4 @@ PotionsEffects:
       1: 1500
 
 ### DO NOT TOUCH ###
-ConfigVersion: 1.7
+ConfigVersion: 1.8

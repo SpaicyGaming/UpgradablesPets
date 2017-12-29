@@ -21,6 +21,7 @@ BuyPetsGui:
   lores:
   - ""
   - "&ePrice: %price%"
+  - "&eHealth: %health%"
   - "&aClick to buy"
 MainGui:
   title: "&c&lPets"
@@ -29,6 +30,7 @@ MainGui:
     lores:
     - ""
     - "&cPet Level: &7%level%"
+    - "&cPet Max Health: &7%health% HP"
     - "&cType: &7%type%"
   petHereItem:
     name: "&fTeleport here %petname%"
@@ -40,6 +42,19 @@ MainGui:
     lores:
     - ""
     - "&cTeleport your pet away"
+  maxHealthItem:
+    name: "&bPet Max Health"
+    lores:
+    - ""
+    - "&aCurrent max health: &7%currMaxHealth%"
+    - "&aCurrent level: &7%currLevel%"
+    - ""
+    - "&aNext level cost: &7$%nextLevelCost%"
+    - "&aNext level max health: &7%nextMaxHealth% HP"
+    - "&cClick to upgrade!"
+    maxLevelReached:
+    - ""
+    - "&cYou reached the max health level &7(%currLevel%)"
   potions:
     # PlaceHolders:
     # %effect% => Effect name
@@ -50,7 +65,7 @@ MainGui:
     name: "&b%effect% &clvl.%current_lvl%"
     lores:
     - ""
-    - "&ePrice: &7%price%"
+    - "&ePrice: &7$%price%"
     - "&aCurrent Level: &7%current_lvl%"
     - "&aNext Level: &7%next_lvl%"
     - "&aMax Level: &7%max_lvl%"
@@ -60,12 +75,22 @@ MainGui:
     - "&aCurrent Level: &7%current_lvl%"
 ConfirmGui:
   title: '&aConfirm Purchase'
-  mainItem:
+  # Buy potion effect
+  potionPurchaseItem:
+    title: "&aConfirm Effecet Purchase"
     name: "&6Buy %effect%&r &6Effect &clvl.%lvl%"
     lores:
     - ""
     - "&cCurrent lvl: &7%lvl%"
-    - "&aPrice: &7%price%"
+    - "&aPrice: &7%cost%"
+  # Buy pet max health
+  maxHealthUpgradeItem:
+    title: "&aConfirm Health Purchase"
+    name: "&6Buy MaxHealth &c%nextMaxHealth% &7(level %nextLevel%)"
+    lores:
+    - ""
+    - "&cCurrent Level: &7%currLevel%"
+    - "&aPrice: &7$%cost%"
   buyItem:
     name: "&aBuy!"
     lores:
@@ -102,7 +127,8 @@ Alerts:
   cantHitOwnPet: "Don't hurt your pet!"
   blacklistedWorldCmd: "&cI'm sorry, pets are disabled in this world."
   petBought: "&aYou bought a %pet%&r for &6%cost%"
-  potEffectBought: "You bought %effect%&r effect for %cost%"
+  potEffectBought: "&aYou bought &6%effect%&r effect for &b$%cost%"
+  maxHealthBought: "&aYou bought pet max health level &b%level% &7(%HP% HP) &afor &b$%cost%"
   hasNotPet: "&cYou don't have a pet"
   invalidPetName: "&cInvalid pet name! It cannot be longer than %max_chars% characters."
   containsBlWord: "&cYou can't use the word &6'{bl_word}' &cin your pet's name!"
@@ -124,4 +150,4 @@ Alerts:
     petsCounter: "&6There are &b%count% &6pets online."
 
 ## Do not touch ##
-LangVersion: 1.6
+LangVersion: 1.7
