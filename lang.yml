@@ -134,6 +134,7 @@ Alerts:
   containsBlWord: "&cYou can't use the word &6'{bl_word}' &cin your pet's name!"
   petRenamed: "&aPet correctly renamed! Current name: %pet_name%"
   effectMaxed: "&cThere are no more available levels, Max level reached"
+  healthMaxed: "&cYou have reached the max level!"
   petDeleted: "&c%owner%'s pet has been deleted!"
   permissions:
     noPerms: "&cSorry, you don't have enought permissions"
@@ -143,6 +144,7 @@ Alerts:
     noCountPerms: "&cYou don't have the permissions to count all online pets"
     noRenamePerms: "&cYou don't have the permissions to rename your pet!"
     noRenameFormatPerms: "&cYou don't have the permissions to use this chat format in pet's name"
+    noRenameColorPerms: "&cYou don't have permissions to use color codes in pet's name!"
     noVip: "&cYou don't have the permission to buy the pet %pet%&c, it's only for vips!"
   staff:
     playersCmd: "&cSorry, this command can be executed only by player."
@@ -150,4 +152,4 @@ Alerts:
     petsCounter: "&6There are &b%count% &6pets online."
 
 ## Do not touch ##
-LangVersion: 1.7
+LangVersion: 1.8
