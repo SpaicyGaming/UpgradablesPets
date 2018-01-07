@@ -4,7 +4,7 @@ HelpMenu:
   footer: "             &c&m-----+--+-----"
   users:
   - ""
-  - "&b/pet help &7-> &6Shows subcommands"
+  - "&b/pet help &7-> &6Show subcommands"
   - "&b/pet gui &7-> &6Open the Gui"
   - "&b/pet name <name> &7-> &6Rename your pet"
   - "&b/pet here &7-> &6Teleport your pet to your location"
@@ -12,8 +12,9 @@ HelpMenu:
   - ""
   staff:
   - "&7&m-+-+-+-&r &cStaff Cmds &7&m-+-+-+-"
+  - "&b/pet count &7-> Count all pets in the server"
+  - "&b/pet despawnall &7-> Despawn all pets"
   - "&b/pet killall &7-> Kill all pets"
-  - "&b/pet count &7-> Counts all pets in the server"
   - ""
 ## GUIs ##
 BuyPetsGui:
@@ -135,6 +136,7 @@ Alerts:
   petRenamed: "&aPet correctly renamed! Current name: %pet_name%"
   effectMaxed: "&cThere are no more available levels, Max level reached"
   healthMaxed: "&cYou have reached the max level!"
+  petsDespawned: "&aYou have despawned all pets!"
   petDeleted: "&c%owner%'s pet has been deleted!"
   permissions:
     noPerms: "&cSorry, you don't have enought permissions"
@@ -152,4 +154,4 @@ Alerts:
     petsCounter: "&6There are &b%count% &6pets online."
 
 ## Do not touch ##
-LangVersion: 1.8
+LangVersion: 1.9

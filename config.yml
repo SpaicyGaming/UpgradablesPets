@@ -14,6 +14,8 @@ MainSettings:
     # %owner% => Pet owner name
     # %name% => Pet name (default names are in the next section)
     # %lvl% => Pet level
+    # %maxHealth% => Pet max health  value
+    # %maxHealthLvl% => Pet max health level
     format: "&b%owner%'s &6%name% &c(lvl.%lvl%)"
     maxLength: 25
     # These words can't be used in pet's name (Bypass permission: upgradablespets.rename.bypassbl)
@@ -29,6 +31,12 @@ MainSettings:
 
   # Open gui on right click on pet
   openGuiOnRightClick: true
+
+  # Open the gui on '/pet'
+  openGuiOnSlashPet: false
+
+  # Remove all potion effects on '/pet away'
+  removeEffectsOnPetAway: true
 
   # True -> Send a message when a player try to hiurt his own pet.
   sendCantHitMessage: true
@@ -236,4 +244,4 @@ PotionsEffects:
       1: 1500
 
 ### DO NOT TOUCH ###
-ConfigVersion: 1.8
+ConfigVersion: 1.9
