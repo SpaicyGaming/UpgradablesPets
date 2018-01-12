@@ -9,12 +9,14 @@ HelpMenu:
   - "&b/pet name <name> &7-> &6Rename your pet"
   - "&b/pet here &7-> &6Teleport your pet to your location"
   - "&b/pet away &7-> &6Despawn your pet"
+  - "&b/pet delete &7-> (!) Permanently delete your pet"
   - ""
   staff:
   - "&7&m-+-+-+-&r &cStaff Cmds &7&m-+-+-+-"
   - "&b/pet count &7-> Count all pets in the server"
   - "&b/pet despawnall &7-> Despawn all pets"
   - "&b/pet killall &7-> Kill all pets"
+  - "&b/pet delete <player> &7-> Permanently delete player's pet"
   - ""
 ## GUIs ##
 BuyPetsGui:
@@ -116,6 +118,7 @@ Effects:
 # MESSAGES
 #
 Alerts:
+  hasNotPet: "&cYou don't have a pet"
   notEnoughtMoney: "&cSorry, you don't have enought money!"
   alreadyHavePet: "&cYou already have a pet!"
   petHere: "&aYour pet has been teleported to your location!"
@@ -130,28 +133,30 @@ Alerts:
   petBought: "&aYou bought a %pet%&r for &6%cost%"
   potEffectBought: "&aYou bought &6%effect%&r effect for &b$%cost%"
   maxHealthBought: "&aYou bought pet max health level &b%level% &7(%HP% HP) &afor &b$%cost%"
-  hasNotPet: "&cYou don't have a pet"
   invalidPetName: "&cInvalid pet name! It cannot be longer than %max_chars% characters."
   containsBlWord: "&cYou can't use the word &6'{bl_word}' &cin your pet's name!"
   petRenamed: "&aPet correctly renamed! Current name: %pet_name%"
   effectMaxed: "&cThere are no more available levels, Max level reached"
   healthMaxed: "&cYou have reached the max level!"
-  petsDespawned: "&aYou have despawned all pets!"
-  petDeleted: "&c%owner%'s pet has been deleted!"
+  petDeleted: "&aYou deleted your pet!"
+  petDeletedByOthers: "&cYour pet has been deleted by a server administrator!"
   permissions:
     noPerms: "&cSorry, you don't have enought permissions"
     noChangePerms: "&cYou don't have the permissions to change your pet!"
     noKillallPerms: "&cYou don't have the permissions to kill all the pets"
-    noDeletePerms: "&cYou don't have the permissions to delete a pet"
+    noDeletePerms: "&cYou don't have the permissions to delete you pet"
     noCountPerms: "&cYou don't have the permissions to count all online pets"
     noRenamePerms: "&cYou don't have the permissions to rename your pet!"
     noRenameFormatPerms: "&cYou don't have the permissions to use this chat format in pet's name"
     noRenameColorPerms: "&cYou don't have permissions to use color codes in pet's name!"
     noVip: "&cYou don't have the permission to buy the pet %pet%&c, it's only for vips!"
   staff:
+    noPetOthers: "&cThe specified player doesn't own a pet!"
     playersCmd: "&cSorry, this command can be executed only by player."
     petsKilledCounter: "&b%count% &6pets have been killed!"
     petsCounter: "&6There are &b%count% &6pets online."
+    petsDespawned: "&aYou have despawned all pets!"
+    petDeletedOthers: "&aYou deleted %target%'s pet!"
 
 ## Do not touch ##
-LangVersion: 1.9
+LangVersion: 2.0
