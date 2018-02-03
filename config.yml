@@ -5,6 +5,22 @@
 #                                              #
 #######################
 
+Storage:
+  # file - mysql
+  type: file
+
+   # MySQL Credentials
+  credentials:
+    hostname: localhost
+    database: UpgradablesPets
+    # Default MySQL port: 3306
+    port: 3306
+    username: root
+    password: password
+
+  #  MySQL Table prefix
+  tablePrefix: 'UP_'
+
 MainSettings:
   currency: "$"
   spawnPetAtJoin: true
@@ -13,10 +29,10 @@ MainSettings:
   petName:
     # %owner% => Pet owner name
     # %name% => Pet name (default names are in the next section)
-    # %lvl% => Pet level
+    # %pet_lvl% => Pet level
     # %maxHealth% => Pet max health  value
     # %maxHealthLvl% => Pet max health level
-    format: "&b%owner%'s &6%name% &c(lvl.%lvl%)"
+    format: "&b%owner%'s &6%name% &c(lvl.%pet_lvl%)"
     maxLength: 25
     # These words can't be used in pet's name (Bypass permission: upgradablespets.rename.bypassbl)
     blacklistedWords:
@@ -202,7 +218,6 @@ PetsCost:
 PotionsEffects:
   # How many levels will be added to the pet level for each effects upgrade bought
   increasePetLevel: 5
-  # you can find more info about effects here: https://minecraft.gamepedia.com/Status_effect#Haste
   speed:
     active: true
     levelsCosts:
@@ -244,4 +259,4 @@ PotionsEffects:
       1: 1500
 
 ### DO NOT TOUCH ###
-ConfigVersion: 1.9
+ConfigVersion: 2.0
