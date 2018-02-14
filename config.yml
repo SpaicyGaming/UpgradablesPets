@@ -26,6 +26,9 @@ MainSettings:
   spawnPetAtJoin: true
   babyPets: true
 
+  # If enabled the plugin will override all mob spawning restrictions (such as WorldGuard's mob-spawning flag)
+  overrideSpawningRestrictions: true
+
   petName:
     # %owner% => Pet owner name
     # %name% => Pet name (default names are in the next section)
@@ -36,7 +39,6 @@ MainSettings:
     maxLength: 25
     # These words can't be used in pet's name (Bypass permission: upgradablespets.rename.bypassbl)
     blacklistedWords:
-      - fuck
       - whateveryouwant
 
   showPetHereMsg: true
@@ -259,4 +261,4 @@ PotionsEffects:
       1: 1500
 
 ### DO NOT TOUCH ###
-ConfigVersion: 2.0
+ConfigVersion: 2.1
