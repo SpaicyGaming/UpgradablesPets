@@ -6,8 +6,8 @@
 #######################
 
 Storage:
-  # file - mysql
-  type: file
+  # flatfile - mysql
+  type: flatfile
 
    # MySQL Credentials
   credentials:
@@ -63,6 +63,12 @@ MainSettings:
   blacklistedWorlds:
     - world_without_pets
 
+  # https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
+  petPurchaseDateFormat: "MM/dd/yy HH:mm"
+
+  # How many levels will be added to the pet level for each upgrade (max health - potion effect)
+  increasePetLevel: 5
+
   Sheep:
     # Prevent sheeps from eating grass
     preventGrassEating: true
@@ -78,7 +84,7 @@ PetsCost:
     price: 500
     # You can add/remove all the levels you want, except the level "1"
     maxHealth:
-      # The default max health
+      # The default max health level
       1:
         value: 7.0
       2:
@@ -218,8 +224,6 @@ PetsCost:
 # YOU CAN DELETE AND ADD LEVELS
 # the cost MUST be a natural number greater than 0
 PotionsEffects:
-  # How many levels will be added to the pet level for each effects upgrade bought
-  increasePetLevel: 5
   speed:
     active: true
     levelsCosts:
@@ -261,4 +265,4 @@ PotionsEffects:
       1: 1500
 
 ### DO NOT TOUCH ###
-ConfigVersion: 2.1
+ConfigVersion: 2.2

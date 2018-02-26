@@ -23,8 +23,8 @@ BuyPetsGui:
   title: "&b&lBuy a Pet"
   lores:
   - ""
-  - "&ePrice: %price%"
-  - "&eHealth: %health%"
+  - "&ePrice: &7%currency%%price%"
+  - "&eHealth: &7%health%"
   - "&aClick to buy"
 MainGui:
   title: "&c&lPets"
@@ -35,6 +35,9 @@ MainGui:
     - "&cPet Level: &7%level%"
     - "&cPet Max Health: &7%health% HP"
     - "&cType: &7%type%"
+    - ""
+    - "&cTotal Cost: &7%currency%%total_cost%"
+    - "&cPurchase Date: &7%purchase_date%"
   petHereItem:
     name: "&fTeleport here %petname%"
     lores:
@@ -52,15 +55,16 @@ MainGui:
     - "&aCurrent max health: &7%currMaxHealth%"
     - "&aCurrent level: &7%currLevel%"
     - ""
-    - "&aNext level cost: &7$%nextLevelCost%"
+    - "&aNext level cost: &7%currency%%nextLevelCost%"
     - "&aNext level max health: &7%nextMaxHealth% HP"
     - "&cClick to upgrade!"
     maxLevelReached:
     - ""
-    - "&cYou reached the max health level &7(%currLevel%)"
+    - "&cYou reached the max health level &7(lvl %currLevel%)"
   potions:
     # PlaceHolders:
     # %effect% => Effect name
+    # %currency% => Currency symbol
     # %price% => Effect price
     # %current_lvl% => Current effect level
     # %next_lvl% => The next effect level
@@ -68,7 +72,7 @@ MainGui:
     name: "&b%effect% &clvl.%current_lvl%"
     lores:
     - ""
-    - "&ePrice: &7$%price%"
+    - "&ePrice: &7%currency%%price%"
     - "&aCurrent Level: &7%current_lvl%"
     - "&aNext Level: &7%next_lvl%"
     - "&aMax Level: &7%max_lvl%"
@@ -85,7 +89,7 @@ ConfirmGui:
     lores:
     - ""
     - "&cCurrent lvl: &7%lvl%"
-    - "&aPrice: &7%cost%"
+    - "&aPrice: &7%currency%%cost%"
   # Buy pet max health
   maxHealthUpgradeItem:
     title: "&aConfirm Health Purchase"
@@ -93,7 +97,7 @@ ConfirmGui:
     lores:
     - ""
     - "&cCurrent Level: &7%currLevel%"
-    - "&aPrice: &7$%cost%"
+    - "&aPrice: &7%currency%%cost%"
   buyItem:
     name: "&aBuy!"
     lores:
@@ -114,6 +118,12 @@ Effects:
   invisibility: "&7Invisibility"
   water_breathing: "&3Water Breathing"
   fast_digging: "&6Haste"
+#
+# PlaceholderAPI Hook
+#
+PlaceholdersHook:
+  true: "&aYes"
+  false: "&cNo"
 #
 # MESSAGES
 #
@@ -159,4 +169,4 @@ Alerts:
     petDeletedOthers: "&aYou deleted %target%'s pet!"
 
 ## Do not touch ##
-LangVersion: 2.0
+LangVersion: 2.1
