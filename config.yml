@@ -6,19 +6,26 @@
 #######################
 
 Storage:
-  # flatfile - mysql
+  # flatfile - mysql - mongodb
   type: flatfile
 
-   # MySQL Credentials
+   # Database Credentials
   credentials:
     hostname: localhost
     database: UpgradablesPets
-    # Default MySQL port: 3306
+
+    # Default ports:
+    # MySQL: 3306
+    # MogoDB: 27017
     port: 3306
+
+    # Affects only MongoDB connections (by default mongodb has no enabled access control)
+    authentication: false
+
     username: root
     password: password
 
-  #  MySQL Table prefix
+  #  MySQL Table prefix / MongoDB Collection prefix
   tablePrefix: 'UP_'
 
 MainSettings:
@@ -32,10 +39,11 @@ MainSettings:
   petName:
     # %owner% => Pet owner name
     # %name% => Pet name (default names are in the next section)
-    # %pet_lvl% => Pet level
+    # %petLvl% => Pet level
     # %maxHealth% => Pet max health  value
     # %maxHealthLvl% => Pet max health level
-    format: "&b%owner%'s &6%name% &c(lvl.%pet_lvl%)"
+    # %totalCost% => Amount of money spent since the pet was bought
+    format: "&b%owner%'s &6%name% &c(lvl.%petLvl%)"
     maxLength: 25
     # These words can't be used in pet's name (Bypass permission: upgradablespets.rename.bypassbl)
     blacklistedWords:
@@ -265,4 +273,4 @@ PotionsEffects:
       1: 1500
 
 ### DO NOT TOUCH ###
-ConfigVersion: 2.2
+ConfigVersion: 2.3
