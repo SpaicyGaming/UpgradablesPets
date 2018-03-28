@@ -82,6 +82,20 @@ MainGui:
     - "&aCurrent Level: &7%current_lvl%"
 ConfirmGui:
   title: '&aConfirm Purchase'
+  # Confirm pet purchase
+  confirmPetPurchase:
+    # The title of the gui
+    title: "&aConfirm Pet Purchase"
+    # Properties of the main item
+    name: "&6Buy &b%petType%"
+    lore:
+    - ""
+    - "&7Click the green item"
+    - "&7to buy this pet!"
+    - ""
+    - "&aCost: &7%currency%%cost%"
+    - "&aMax Health: &7%maxHealth%"
+
   # Buy potion effect
   potionPurchaseItem:
     title: "&aConfirm Effecet Purchase"
@@ -89,7 +103,8 @@ ConfirmGui:
     lores:
     - ""
     - "&cCurrent lvl: &7%lvl%"
-    - "&aPrice: &7%currency%%cost%"
+    - "&aCost: &7%currency%%cost%"
+
   # Buy pet max health
   maxHealthUpgradeItem:
     title: "&aConfirm Health Purchase"
@@ -97,12 +112,14 @@ ConfirmGui:
     lores:
     - ""
     - "&cCurrent Level: &7%currLevel%"
-    - "&aPrice: &7%currency%%cost%"
+    - "&aCost: &7%currency%%cost%"
+
   buyItem:
     name: "&aBuy!"
     lores:
     - ""
     - "&aClick to buy"
+
   backItem:
     name: "&4Cancel"
     lores:
@@ -160,6 +177,7 @@ Alerts:
     noRenameFormatPerms: "&cYou don't have the permissions to use this chat format in pet's name"
     noRenameColorPerms: "&cYou don't have permissions to use color codes in pet's name!"
     noVip: "&cYou don't have the permission to buy the pet %pet%&c, it's only for vips!"
+    noSignPlace: "&cYou don't have the permission to place pet signs"
   staff:
     noPetOthers: "&cThe specified player doesn't own a pet!"
     playersCmd: "&cSorry, this command can be executed only by player."
@@ -169,4 +187,4 @@ Alerts:
     petDeletedOthers: "&aYou deleted %target%'s pet!"
 
 ## Do not touch ##
-LangVersion: 2.1
+LangVersion: 2.2
