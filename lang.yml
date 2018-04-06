@@ -18,7 +18,9 @@ HelpMenu:
   - "&b/pet killall &7-> Kill all pets"
   - "&b/pet delete <player> &7-> Permanently delete player's pet"
   - ""
-## GUIs ##
+#
+# GUIs
+#
 BuyPetsGui:
   title: "&b&lBuy a Pet"
   lores:
@@ -102,6 +104,9 @@ ConfirmGui:
     name: "&6Buy %effect%&r &6Effect &clvl.%lvl%"
     lores:
     - ""
+    - "&7Click the item on the left"
+    - "&7to purchase!"
+    - ""
     - "&cCurrent lvl: &7%lvl%"
     - "&aCost: &7%currency%%cost%"
 
@@ -110,6 +115,9 @@ ConfirmGui:
     title: "&aConfirm Health Purchase"
     name: "&6Buy MaxHealth &c%nextMaxHealth% &7(level %nextLevel%)"
     lores:
+    - ""
+    - "&7Click the item on the left"
+    - "&7to purchase!"
     - ""
     - "&cCurrent Level: &7%currLevel%"
     - "&aCost: &7%currency%%cost%"
@@ -125,7 +133,9 @@ ConfirmGui:
     lores:
     - ""
     - "&cClick to exit"
-# EFFECTS NAMES
+#
+# Potion Effects Names
+#
 Effects:
   speed: "&bSpeed"
   regeneration: "&dRegeneration"
@@ -135,6 +145,19 @@ Effects:
   invisibility: "&7Invisibility"
   water_breathing: "&3Water Breathing"
   fast_digging: "&6Haste"
+#
+# Signs
+#
+Signs:
+  # Take a look at the wiki: https://github.com/SpaicyGaming/UpgradablesPets/wiki/Signs
+  purchasePet:
+    # If you change the first line all the signs you created before will not work anymore
+    0: "&cUpgrPets"
+    # One line must be entirely used to store the pet type. Do not add anything else.
+    # {petType} is replaced with the colored pet name specified in the config.yml
+    1: "{petType}"
+    2: "&bCost: &a${petCost}"
+    3: "&bHealth: &a{maxHealth} HP"
 #
 # PlaceholderAPI Hook
 #
@@ -165,6 +188,8 @@ Alerts:
   petRenamed: "&aPet correctly renamed! Current name: %pet_name%"
   effectMaxed: "&cThere are no more available levels, Max level reached"
   healthMaxed: "&cYou have reached the max level!"
+  signInvalidFormat: "&cYour signs format specified in the lang.yml is invalid! You must dedicate a full line at the variable '{petType}'"
+  signInvalidPetType: "&cThe pet type '%type%' does not exist"
   petDeleted: "&aYou deleted your pet!"
   petDeletedByOthers: "&cYour pet has been deleted by a server administrator!"
   permissions:
@@ -187,4 +212,4 @@ Alerts:
     petDeletedOthers: "&aYou deleted %target%'s pet!"
 
 ## Do not touch ##
-LangVersion: 2.2
+LangVersion: 2.3

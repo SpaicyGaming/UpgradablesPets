@@ -88,6 +88,7 @@ PetsCost:
   Cow:
     active: true
     forVips: false
+    # If you change the name, "purchase pet" signs you created before won't work anymore
     name: "&bCow"
     price: 500
     # You can add/remove all the levels you want, except the level "1"
