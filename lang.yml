@@ -81,7 +81,7 @@ MainGui:
     - "&aMax Level: &7%max_lvl%"
     maxLevelLores:
     - ""
-    - "&bYou have maxed the %effect%&r&b effect"
+    - "&bYou reached the max %effect%&r&b effect level"
     - "&aCurrent Level: &7%current_lvl%"
 ConfirmGui:
   title: '&aConfirm Purchase'
@@ -181,7 +181,7 @@ Alerts:
   petKilledbyPlayer: "&cYour pet has been killed by %killer%!"
   cantHitOwnPet: "Don't hurt your pet!"
   blacklistedWorldCmd: "&cI'm sorry, pets are disabled in this world."
-  petBought: "&aYou bought a %pet%&a for &6%cost%"
+  petBought: "&aYou bought a %pet%&a for &6%currency%%cost%"
   potEffectBought: "&aYou bought &6%effect% &alvl.&6%level% &aeffect for &b$%cost%"
   maxHealthBought: "&aYou bought pet max health level &b%level% &7(%HP% HP) &afor &b$%cost%"
   invalidPetName: "&cInvalid pet name! It cannot be longer than %max_chars% characters."
