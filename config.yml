@@ -8,7 +8,7 @@
 Storage:
   # flatfile - mysql - mongodb
   type: flatfile
- 
+
    # Database Credentials
   credentials:
     hostname: localhost
@@ -55,11 +55,17 @@ MainSettings:
   # Pet respawn delay in minutes
   petRespawnDelay: 1
 
-  # Open gui on right click on pet
+  # Open gui on pet right click
   openGuiOnRightClick: true
 
   # Open the gui on '/pet'
   openGuiOnSlashPet: false
+
+  # Automatically open the main gui when a player purchase a pet
+  openGuiOnPetPurchase: true
+
+  # false -> when a player clicks on an empty slot the gui is not closed
+  closeGuiOnEmptyClick: true
 
   # Remove all potion effects on '/pet away'
   removeEffectsOnPetAway: true
@@ -87,7 +93,8 @@ MainSettings:
 # Pets
 #
 PetsCost:
-  # Note: If you want to disable a pet just set "active" to false, do not delete the configuration section
+  # If you want to disable a pet just set "active" to false, do not delete the configuration section.
+  # This prevent the item from being displayed in the gui, players can still buy the pet using signs
   Cow:
     # Note: If player purchased the pet while it was active he will still own it
     active: true
@@ -303,4 +310,4 @@ PotionsEffects:
       1: 1500
 
 ### DO NOT TOUCH ###
-ConfigVersion: 2.4
+ConfigVersion: 2.5
