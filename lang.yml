@@ -17,6 +17,7 @@ HelpMenu:
   - "&b/pet despawnall &7-> Despawn all pets"
   - "&b/pet buypet <petType> &7-> Read the wiki for info on this command"
   - "&b/pet killall &7-> Kill all pets"
+  - "&b/pet forcerespawn <player> &7-> Force respawn player's pet"
   - "&b/pet delete <player> &7-> Permanently delete player's pet"
   - ""
 #
@@ -195,23 +196,26 @@ Alerts:
   petDeleted: "&aYou deleted your pet!"
   petDeletedByOthers: "&cYour pet has been deleted by a server administrator!"
   permissions:
-    noPerms: "&cSorry, you don't have enought permissions"
-    noChangePerms: "&cYou don't have the permissions to change your pet!"
-    noKillallPerms: "&cYou don't have the permissions to kill all the pets"
-    noDeletePerms: "&cYou don't have the permissions to delete you pet"
-    noCountPerms: "&cYou don't have the permissions to count all online pets"
-    noRenamePerms: "&cYou don't have the permissions to rename your pet!"
-    noRenameFormatPerms: "&cYou don't have the permissions to use this chat format in pet's name"
-    noRenameColorPerms: "&cYou don't have permissions to use color codes in pet's name!"
+    noPerms: "&cSorry, you don't have enough permissions"
+    noChangePerms: "&cYou don't have the permission to change your pet!"
+    noKillallPerms: "&cYou don't have the permission to kill all the pets"
+    noDeletePerms: "&cYou don't have the permission to delete you pet"
+    noForcerespawnPerms: "&cYou don't have the permission to force-respawn pets"
+    noCountPerms: "&cYou don't have the permission to count all online pets"
+    noRenamePerms: "&cYou don't have the permission to rename your pet!"
+    noRenameFormatPerms: "&cYou don't have the permission to use this chat format in pet's name"
+    noRenameColorPerms: "&cYou don't have permission to use color codes in pet's name!"
     noVip: "&cYou don't have the permission to buy the pet %pet%&c, it's only for vips!"
     noSignPlace: "&cYou don't have the permission to place pet signs"
   staff:
     noPetOthers: "&cThe specified player doesn't own a pet!"
-    playersCmd: "&cSorry, this command can be executed only by player."
+    playersCmd: "&cSorry, this command can be executed only by players."
+    targetPlayerOffline: "&c%target% is not online."
     petsKilledCounter: "&b%count% &6pets have been killed!"
     petsCounter: "&6There are &b%count% &6pets online."
     petsDespawned: "&aYou have despawned all pets!"
+    petRespawnedOther: "&aYou respawned %target%'s pet."
     petDeletedOthers: "&aYou deleted %target%'s pet!"
 
 ## Do not touch ##
-LangVersion: 2.3
+LangVersion: 2.4
