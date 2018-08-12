@@ -6,7 +6,7 @@ HelpMenu:
   - ""
   - "&b/pet help &7-> &6Show subcommands"
   - "&b/pet gui &7-> &6Open the Gui"
-  - "&b/pet name <name> &7-> &6Rename your pet"
+  - "&b/pet rename <name> &7-> &6Rename your pet"
   - "&b/pet here &7-> &6Teleport your pet to your location"
   - "&b/pet away &7-> &6Despawn your pet"
   - "&b/pet delete &7-> (!) Permanently delete your pet"
@@ -56,7 +56,7 @@ MainGui:
     name: "&bPet Max Health"
     lores:
     - ""
-    - "&aCurrent max health: &7%currMaxHealth%"
+    - "&aCurrent max health: &7%currMaxHealth% HP"
     - "&aCurrent level: &7%currLevel%"
     - ""
     - "&aNext level cost: &7%currency%%nextLevelCost%"
@@ -215,7 +215,8 @@ Alerts:
     petsCounter: "&6There are &b%count% &6pets online."
     petsDespawned: "&aYou have despawned all pets!"
     petRespawnedOther: "&aYou respawned %target%'s pet."
+    petDeleteNoOwn: "&cYou can't delete your own pet using this command. Use '/pet delete'"
     petDeletedOthers: "&aYou deleted %target%'s pet!"
 
 ## Do not touch ##
-LangVersion: 2.4
+LangVersion: 2.5

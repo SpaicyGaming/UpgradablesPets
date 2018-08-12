@@ -73,6 +73,9 @@ MainSettings:
   # True -> Send a message when a player try to hiurt his own pet.
   sendCantHitMessage: true
 
+  # Whether to send the the "Alerts.petKilledbyPlayer" message to pet owners on "/pet killall"
+  sendPetKilledMessage: true
+
   # Players without the permission 'upgradablespets.world.*' can't use their pet in these worlds
   blacklistedWorlds:
     - world_without_pets
@@ -84,13 +87,13 @@ MainSettings:
   increasePetLevel: 5
 
   Sheep:
-    # Prevent sheeps from eating grass
+    # Prevent sheep from eating grass
     preventGrassEating: true
     # All available colors (for 1.12.2): https://hub.spigotmc.org/javadocs/spigot/org/bukkit/DyeColor.html
     defaultColor: WHITE
 
 #
-# Pets
+# PetType
 #
 PetsCost:
   # If you want to disable a pet just set "active" to false, do not delete the configuration section.
@@ -310,4 +313,4 @@ PotionsEffects:
       1: 1500
 
 ### DO NOT TOUCH ###
-ConfigVersion: 2.5
+ConfigVersion: 2.6
