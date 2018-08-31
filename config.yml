@@ -92,6 +92,10 @@ MainSettings:
     # All available colors (for 1.12.2): https://hub.spigotmc.org/javadocs/spigot/org/bukkit/DyeColor.html
     defaultColor: WHITE
 
+  RainbowSheep:
+    # The time in ticks between color changes (1 second = 20 ticks)
+    colorChangeCooldown: 20
+
 #
 # PetType
 #
@@ -313,4 +317,4 @@ PotionsEffects:
       1: 1500
 
 ### DO NOT TOUCH ###
-ConfigVersion: 2.6
+ConfigVersion: 2.7
