@@ -191,7 +191,8 @@ Alerts:
   effectMaxed: "&cThere are no more available levels, Max level reached"
   healthMaxed: "&cYou have reached the max level!"
   signInvalidFormat: "&cYour signs format specified in the lang.yml is invalid! You must dedicate a full line at the variable '{petType}'"
-  signPlaced: "%petType%'s &aSign correctly placed!"
+  signPlaced: "%petType% &atype sign correctly placed!"
+  signBroken: "%petType% &atype sign correctly broken!"
   invalidPetType: "&cThe pet type '%type%' does not exist"
   petDeleted: "&aYou deleted your pet!"
   petDeletedByOthers: "&cYour pet has been deleted by a server administrator!"
@@ -207,6 +208,7 @@ Alerts:
     noRenameColorPerms: "&cYou don't have permission to use color codes in pet's name!"
     noVip: "&cYou don't have the permission to buy the pet %pet%&c, it's only for vips!"
     noSignPlace: "&cYou don't have the permission to place pet signs"
+    noSignBreak: "&cYou don't have the permission to break pet signs"
   staff:
     noPetOthers: "&cThe specified player doesn't own a pet!"
     playersCmd: "&cSorry, this command can be executed only by players."
@@ -219,4 +221,4 @@ Alerts:
     petDeletedOthers: "&aYou deleted %target%'s pet!"
 
 ## Do not touch ##
-LangVersion: 2.5
+LangVersion: 2.6
