@@ -37,7 +37,8 @@ MainGui:
     lores:
     - ""
     - "&cPet Level: &7%level%"
-    - "&cPet Max Health: &7%health% HP"
+    - "&cPet Health: &7%health_current% HP"
+    - "&cPet Max Health: &7%health_max% HP"
     - "&cType: &7%type%"
     - ""
     - "&cTotal Cost: &7%currency%%total_cost%"
@@ -85,7 +86,6 @@ MainGui:
     - "&bYou reached the max %effect%&r&b effect level"
     - "&aCurrent Level: &7%current_lvl%"
 ConfirmGui:
-  title: '&aConfirm Purchase'
   # Confirm pet purchase
   confirmPetPurchase:
     # The title of the gui
