@@ -5,6 +5,12 @@
 #                                              #
 #######################
 
+# Set the locale for all messages.
+# If you don't set this, "en" will be used.
+# For example, to set language to Italina, set locale to "it", to use the file "lang_it.yml".
+# The plugin already provides english and italian (it) messages, you can create as many translations as you want.
+locale: en
+
 Storage:
   # flatfile - mysql - mongodb
   type: flatfile
@@ -95,6 +101,14 @@ MainSettings:
   RainbowSheep:
     # The time in ticks between color changes (1 second = 20 ticks)
     colorChangeCooldown: 20
+
+FollowPet:
+  # The distance between the pet and his owner while he is standing still
+  petDistance: 1.0
+
+  # When the distance between a pet and his owner is greater than the one specified below (in blocks), the
+  # pet gets teleported at player's location
+  petMaxDistance: 10
 
 #
 # PetType
