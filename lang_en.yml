@@ -1,74 +1,110 @@
+# Chat prefix
 Prefix: "&7[&bUpgradablesPets&7]"
+
+# Pet display name format. Placeholders:
+# %owner% => Pet owner name
+# %name% => Pet name (default names are in the next section)
+# %petLvl% => Pet level
+# %maxHealth% => Pet max health  value
+# %maxHealthLvl% => Pet max health level
+# %totalCost% => Amount of money spent since the pet was bought
+PetNameFormat: "&b%owner%'s &6%name% &c(lvl.%petLvl%)"
+
 HelpMenu:
   header: "&7&m-+-+-+-&r &c&lUpgradablesPets &7&m-+-+-+-"
   footer: "             &c&m-----+--+-----"
   users:
-  - ""
-  - "&b/pet help &7-> &6Show subcommands"
-  - "&b/pet gui &7-> &6Open the Gui"
-  - "&b/pet rename <name> &7-> &6Rename your pet"
-  - "&b/pet here &7-> &6Teleport your pet to your location"
-  - "&b/pet away &7-> &6Despawn your pet"
-  - "&b/pet delete &7-> (!) Permanently delete your pet"
-  - ""
+    - ""
+    - "&b/pet help &7-> &6Show subcommands"
+    - "&b/pet gui &7-> &6Open the Gui"
+    - "&b/pet rename <name> &7-> &6Rename your pet"
+    - "&b/pet here &7-> &6Teleport your pet to your location"
+    - "&b/pet away &7-> &6Despawn your pet"
+    - "&b/pet info &7-> &6Show info"
+    - "&b/pet delete &7-> (!) Permanently delete your pet"
+    - ""
   staff:
-  - "&7&m-+-+-+-&r &cStaff Cmds &7&m-+-+-+-"
-  - "&b/pet count &7-> Count all pets in the server"
-  - "&b/pet count <world> &7-> Count pets in the world"
-  - "&b/pet despawnall &7-> Despawn all pets"
-  - "&b/pet buypet <petType> &7-> Read the wiki for info on this command"
-  - "&b/pet kill <player> &7-> Kill player's pet"
-  - "&b/pet killall &7-> Kill all pets"
-  - "&b/pet forcerespawn <player> &7-> Force respawn player's pet"
-  - "&b/pet give <player> <petType> &7-> Set player's pet"
-  - "&b/pet delete <player> &7-> Permanently delete player's pet"
+    - "&7&m-+-+-+-&r &cStaff Cmds &7&m-+-+-+-"
+    - "&b/pet reload &7-> Reload configuration files"
+    - "&b/pet count &7-> Count all pets in the server"
+    - "&b/pet count <world> &7-> Count pets in the world"
+    - "&b/pet despawnall &7-> Despawn all pets"
+    - "&b/pet buypet <petType> &7-> Read the wiki for info on this command"
+    - "&b/pet kill <player> &7-> Kill player's pet"
+    - "&b/pet killall &7-> Kill all pets"
+    - "&b/pet forcerespawn <player> &7-> Force respawn player's pet"
+    - "&b/pet give <player> <petType> &7-> Set player's pet"
+    - "&b/pet delete <player> &7-> Permanently delete player's pet"
+    - ""
+
+# Output of "/pet info" command execution
+# Placeholders:
+# {pet_name}
+# {pet_level}
+# {pet_type}
+# {pet_health_current}
+# {pet_health_max}
+# {currency}
+# {pet_total_cost}
+# {pet_purchase_date}
+PetInfoFormat:
   - ""
+  - "&b&l{pet_name}&r&b's info"
+  - "&cPet Level: &7{pet_level}"
+  - "&cType: &7{pet_type}"
+  - ""
+  - "&cPet Health: &7{pet_health_current} HP"
+  - "&cPet Max Health: &7{pet_health_max} HP"
+  - ""
+  - "&cTotal Cost: &7{currency}{pet_total_cost}"
+  - "&cPurchase Date: &7{pet_purchase_date}"
+
 #
 # GUIs
 #
 BuyPetsGui:
-  title: "&b&lBuy a Pet"
+  title: "&c&lBuy a Pet"
   lores:
-  - ""
-  - "&ePrice: &7%currency%%price%"
-  - "&eHealth: &7%health%"
-  - "&aClick to buy"
+    - ""
+    - "&ePrice: &7%currency%%price%"
+    - "&eHealth: &7%health%"
+    - "&aClick to buy"
 MainGui:
   title: "&c&lPets"
   infoItem:
     name: "&b%petname%&r's info"
     lores:
-    - ""
-    - "&cPet Level: &7%level%"
-    - "&cPet Health: &7%health_current% HP"
-    - "&cPet Max Health: &7%health_max% HP"
-    - "&cType: &7%type%"
-    - ""
-    - "&cTotal Cost: &7%currency%%total_cost%"
-    - "&cPurchase Date: &7%purchase_date%"
+      - ""
+      - "&cPet Level: &7%level%"
+      - "&cPet Health: &7%health_current% HP"
+      - "&cPet Max Health: &7%health_max% HP"
+      - "&cType: &7%type%"
+      - ""
+      - "&cTotal Cost: &7%currency%%total_cost%"
+      - "&cPurchase Date: &7%purchase_date%"
   petHereItem:
     name: "&fTeleport here %petname%"
     lores:
-    - ""
-    - "&cTeleport here your pet"
+      - ""
+      - "&cTeleport here your pet"
   petAwayItem:
     name: "&fDespawn %petname%"
     lores:
-    - ""
-    - "&cTeleport your pet away"
+      - ""
+      - "&cTeleport your pet away"
   maxHealthItem:
     name: "&bPet Max Health"
     lores:
-    - ""
-    - "&aCurrent max health: &7%currMaxHealth% HP"
-    - "&aCurrent level: &7%currLevel%"
-    - ""
-    - "&aNext level cost: &7%currency%%nextLevelCost%"
-    - "&aNext level max health: &7%nextMaxHealth% HP"
-    - "&cClick to upgrade!"
+      - ""
+      - "&aCurrent max health: &7%currMaxHealth% HP"
+      - "&aCurrent level: &7%currLevel%"
+      - ""
+      - "&aNext level cost: &7%currency%%nextLevelCost%"
+      - "&aNext level max health: &7%nextMaxHealth% HP"
+      - "&cClick to upgrade!"
     maxLevelReached:
-    - ""
-    - "&cYou reached the max health level &7(lvl %currLevel%)"
+      - ""
+      - "&cYou reached the max health level &7(lvl %currLevel%)"
   potions:
     # PlaceHolders:
     # %effect% => Effect name
@@ -79,65 +115,66 @@ MainGui:
     # %max_lvl% => The effect max level
     name: "&b%effect% &clvl.%current_lvl%"
     lores:
-    - ""
-    - "&ePrice: &7%currency%%price%"
-    - "&aCurrent Level: &7%current_lvl%"
-    - "&aNext Level: &7%next_lvl%"
-    - "&aMax Level: &7%max_lvl%"
+      - ""
+      - "&ePrice: &7%currency%%price%"
+      - "&aCurrent Level: &7%current_lvl%"
+      - "&aNext Level: &7%next_lvl%"
+      - "&aMax Level: &7%max_lvl%"
     maxLevelLores:
-    - ""
-    - "&bYou reached the max %effect%&r&b effect level"
-    - "&aCurrent Level: &7%current_lvl%"
+      - ""
+      - "&bYou reached the max %effect%&r&b effect level"
+      - "&aCurrent Level: &7%current_lvl%"
 ConfirmGui:
   # Confirm pet purchase
   confirmPetPurchase:
-    # The title of the gui
+    # The title of the gui.
+    # NOTE: it MUST be unique. Do not give to many GUIs the same title
     title: "&aConfirm Pet Purchase"
     # Properties of the main item
     name: "&6Buy &b%petType%"
     lore:
-    - ""
-    - "&7Click the green item"
-    - "&7to buy this pet!"
-    - ""
-    - "&aCost: &7%currency%%cost%"
-    - "&aMax Health: &7%maxHealth%"
+      - ""
+      - "&7Click the green item"
+      - "&7to buy this pet!"
+      - ""
+      - "&aCost: &7%currency%%cost%"
+      - "&aMax Health: &7%maxHealth%"
 
   # Buy potion effect
   potionPurchaseItem:
     title: "&aConfirm Effect Purchase"
     name: "&6Buy %effect%&r &6Effect &clvl.%lvl%"
     lores:
-    - ""
-    - "&7Click the item on the left"
-    - "&7to purchase!"
-    - ""
-    - "&cCurrent lvl: &7%lvl%"
-    - "&aCost: &7%currency%%cost%"
+      - ""
+      - "&7Click the item on the left"
+      - "&7to purchase!"
+      - ""
+      - "&cCurrent lvl: &7%lvl%"
+      - "&aCost: &7%currency%%cost%"
 
   # Buy pet max health
   maxHealthUpgradeItem:
     title: "&aConfirm Health Purchase"
     name: "&6Buy MaxHealth &c%nextMaxHealth% &7(level %nextLevel%)"
     lores:
-    - ""
-    - "&7Click the item on the left"
-    - "&7to purchase!"
-    - ""
-    - "&cCurrent Level: &7%currLevel%"
-    - "&aCost: &7%currency%%cost%"
+      - ""
+      - "&7Click the item on the left"
+      - "&7to purchase!"
+      - ""
+      - "&cCurrent Level: &7%currLevel%"
+      - "&aCost: &7%currency%%cost%"
 
   buyItem:
     name: "&aBuy!"
     lores:
-    - ""
-    - "&aClick to buy"
+      - ""
+      - "&aClick to buy"
 
   backItem:
     name: "&4Cancel"
     lores:
-    - ""
-    - "&cClick to exit"
+      - ""
+      - "&cClick to exit"
 #
 # Potion Effects Names
 #
@@ -161,7 +198,7 @@ Signs:
     # One line must be entirely used to store the pet type. Do not add anything else.
     # {petType} is replaced with the colored pet name specified in the config.yml
     1: "{petType}"
-    2: "&bCost: &a${petCost}"
+    2: "&bCost: &a{currency}{petCost}"
     3: "&bHealth: &a{maxHealth} HP"
 #
 # PlaceholderAPI Hook
@@ -184,10 +221,11 @@ Alerts:
   petKilled: "&cYou killed %owner%'s pet!"
   petKilledbyPlayer: "&cYour pet has been killed by %killer%!"
   cantHitOwnPet: "&cDon't hurt your pet!"
+  blacklistedWorld: "&cPets are disabled in this world."
   blacklistedWorldCmd: "&cI'm sorry, pets are disabled in this world."
   petBought: "&aYou bought a %pet%&a for &6%currency%%cost%"
-  potEffectBought: "&aYou bought &6%effect% &alvl.&6%level% &aeffect for &b$%cost%"
-  maxHealthBought: "&aYou bought pet max health level &b%level% &7(%HP% HP) &afor &b$%cost%"
+  potEffectBought: "&aYou bought &6%effect% &alvl.&6%level% &aeffect for &b%currency%%cost%"
+  maxHealthBought: "&aYou bought pet max health level &b%level% &7(%HP% HP) &afor &b%currency%%cost%"
   invalidPetName: "&cInvalid pet name! It cannot be longer than %max_chars% characters."
   containsBlWord: "&cYou can't use the word &6'{bl_word}' &cin your pet's name!"
   petRenamed: "&aPet correctly renamed! Current name: %pet_name%"
@@ -213,10 +251,12 @@ Alerts:
     noRenameFormatPerms: "&cYou don't have the permission to use this chat format in pet's name"
     noRenameColorPerms: "&cYou don't have permission to use color codes in pet's name!"
     noGivePerms: "&cYou don't have permission to to give pets!"
+    noReloadPerms: "&cYou don't have the permission to reload the configuration files!"
     noVip: "&cYou don't have the permission to buy the pet %pet%&c, it's only for vips!"
     noSignPlace: "&cYou don't have the permission to place pet signs"
     noSignBreak: "&cYou don't have the permission to break pet signs"
   staff:
+    reloadSuccess: "&aConfiguration files correctly reloaded! &7(read the console for more info)"
     noPetOthers: "&cThe specified player doesn't own a pet!"
     alreadyPetOthers: "&c{target} already has a pet!"
     playersCmd: "&cSorry, this command can be executed only by players."
@@ -239,4 +279,4 @@ Alerts:
     petDeletedOthers: "&aYou deleted %target%'s pet!"
 
 ## Do not touch ##
-LangVersion: 2.9
+LangVersion: 3.1
