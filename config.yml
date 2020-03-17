@@ -7,7 +7,7 @@
 
 # Set the locale for all messages.
 # If you don't set this, "en" will be used.
-# For example, to set language to Italina, set locale to "it", to use the file "lang_it.yml".
+# For example, to set the language to Italian, set locale to "it", to use the file "lang_it.yml".
 # The plugin already provides english and italian (it) messages, you can create as many translations as you want.
 locale: en
 
@@ -44,6 +44,9 @@ MainSettings:
   spawnPetAtJoin: true
   babyPets: true
 
+  # Set whether pets are silent or not. When a pet is silent it will not produce any sound.
+  silentPets: false
+
   # If enabled the plugin will override all mob spawning restrictions (such as WorldGuard's mob-spawning flag)
   overrideSpawningRestrictions: true
 
@@ -58,14 +61,17 @@ MainSettings:
   showPetHereMsg: true
   showPetAwayMsg: true
 
-  # Pet respawn delay in minutes
-  petRespawnDelay: 1
+  # The amount of seconds after a dead pet respawns (used only if the pet-specific respawn delay isn't set)
+  petRespawnDelay: 60
 
   # Open gui on pet right click
   openGuiOnRightClick: true
 
   # Open the gui on '/pet'
   openGuiOnSlashPet: false
+
+  # Open the gui on '/pet' only if the player doesn't already own a pet (ignored if openGuiOnSlashPet  is enabled)
+  openBuyPetGuiOnSlashPet: true
 
   # Automatically open the main gui when a player purchase a pet
   openGuiOnPetPurchase: true
@@ -76,10 +82,16 @@ MainSettings:
   # Remove all potion effects on '/pet away'
   removeEffectsOnPetAway: true
 
-  # True -> Send a message when a player try to hiurt his own pet.
+  # True -> Send a message when a player tries to hurt his own pet.
   sendCantHitMessage: true
 
-  # Whether to send the the "Alerts.petKilledbyPlayer" message to pet owners on "/pet killall"
+  # Whether players can hit someone else's pet
+  canHitOthersPets: true
+
+  # True -> Send a message when a player tries to hurt someone else's pet. (only if 'canHitOthersPets' is true)
+  sendCantHitOthersPetsMessage: true
+
+  # Whether to send the "Alerts.petKilledbyPlayer" message to pet owners on "/pet killall"
   sendPetKilledMessage: true
 
   # Players without the permission 'upgradablespets.world.*' can't use their pet in these worlds
@@ -91,6 +103,9 @@ MainSettings:
 
   # How many levels will be added to the pet level for each upgrade (max health - potion effect)
   increasePetLevel: 5
+
+  # Whether pets should take fall damage (true -> fall damage disabled)
+  disableFallDamage: true
 
   Sheep:
     # Prevent sheep from eating grass
@@ -123,6 +138,8 @@ PetsCost:
     slot: 10
     # To buy a vip pet a player needs the permission "upgradablespets.vip.pet_to_lower_case". Example: "upgradablespets.vip.rainbow_sheep"
     forVips: false
+    # The amount of seconds after a dead pet respawns (can be omitted. If omitted, the more general "MainSettings.petRespawnDelay" value is used)
+    respawnDelay: 90
     # If you change the name, "purchase pet" signs you created before won't work anymore
     name: "&bCow"
     price: 500
@@ -260,7 +277,7 @@ PetsCost:
   Rainbow_sheep:
     active: true
     slot: 23
-    forVips: false
+    forVips: true
     name: "&5Ra&6in&3bow &cSh&beep"
     price: 2000
     maxHealth:
@@ -360,4 +377,4 @@ Leaderboards:
 NotifyUpdates: true
 
 ### DO NOT TOUCH ###
-ConfigVersion: 2.8
+ConfigVersion: 3.2

@@ -216,11 +216,12 @@ Alerts:
   petHere: "&aIl tuo pet è stato teletrasportato da te!"
   petAway: "&cIl tuo pet è stato teletrasportato via!"
   petDie: "&cIl tuo pet è morto"
-  petIsDeath: "&cIl tuo pet è morto, respawnerà dopo %delay% minuti."
+  petIsDeath: "&cIl tuo pet è morto, respawnerà dopo %delay% secondi."
   petRespawned: "&aIl tuo pet è respawnato!"
   petKilled: "&cHai ucciso il pet di %owner%!"
   petKilledbyPlayer: "&cIl tuo pet è stato ucciso da %killer%!"
   cantHitOwnPet: "&cNon colpire il tuo pet!"
+  canHitOthersPets: "&cNon puoi colpire i pets degli altri!"
   blacklistedWorld: "&cI pets sono disabilitati in questo mondo."
   blacklistedWorldCmd: "&cMi dispiace, i pets sono disabilitati in questo mondo."
   petBought: "&aHai acquistato un %pet%&a per &6%currency%%cost%"
@@ -278,4 +279,4 @@ Alerts:
     petDeletedOthers: "&aHai eliminato il pet di %target%!"
 
 ## Non toccare ##
-LangVersion: 3.1
+LangVersion: 3.2
