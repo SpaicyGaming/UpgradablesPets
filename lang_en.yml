@@ -122,7 +122,8 @@ MainGui:
       - "&aMax Level: &7%max_lvl%"
     maxLevelLores:
       - ""
-      - "&bYou reached the max %effect%&r&b effect level"
+      - "&bYou reached the max"
+      - "&b%effect%&r&b effect level"
       - "&aCurrent Level: &7%current_lvl%"
 ConfirmGui:
   # Confirm pet purchase
@@ -185,6 +186,7 @@ Effects:
   night_vision: "&9Night Vision"
   increase_damage: "&aStrength"
   invisibility: "&7Invisibility"
+  damage_resistance: "&eResistance"
   water_breathing: "&3Water Breathing"
   fast_digging: "&6Haste"
 #
@@ -280,4 +282,4 @@ Alerts:
     petDeletedOthers: "&aYou deleted %target%'s pet!"
 
 ## Do not touch ##
-LangVersion: 3.2
+LangVersion: 3.3

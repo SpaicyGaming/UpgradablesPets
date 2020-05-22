@@ -122,7 +122,8 @@ MainGui:
       - "&aLivello massimo: &7%max_lvl%"
     maxLevelLores:
       - ""
-      - "&bHai raggiunto il livello massimo per l'effetto %effect%&r&b!"
+      - "&bHai raggiunto il livello massimo"
+      - "&bper l'effetto %effect%&r&b!"
       - "&aLivello attuale: &7%current_lvl%"
 ConfirmGui:
   # Confirm pet purchase
@@ -185,6 +186,7 @@ Effects:
   night_vision: "&9Visione Notturna"
   increase_damage: "&aForza"
   invisibility: "&7Invisibilità"
+  damage_resistance: "&eResistenza"
   water_breathing: "&3Respirazione"
   fast_digging: "&6Haste"
 #
@@ -224,9 +226,9 @@ Alerts:
   canHitOthersPets: "&cNon puoi colpire i pets degli altri!"
   blacklistedWorld: "&cI pets sono disabilitati in questo mondo."
   blacklistedWorldCmd: "&cMi dispiace, i pets sono disabilitati in questo mondo."
-  petBought: "&aHai acquistato un %pet%&a per &6%currency%%cost%"
-  potEffectBought: "&aHai acquistato l'effetto &6%effect% &alvl.&6%level% &aper &b%currency%%cost%"
-  maxHealthBought: "&aHai acquistato la vita massima del pet livello &b%level% &7(%HP% HP) &aper &b%currency%%cost%"
+  petBought: "&aHai acquistato un %pet%&a a &6%currency%%cost%"
+  potEffectBought: "&aHai acquistato l'effetto &6%effect% &alvl.&6%level% &aa &b%currency%%cost%"
+  maxHealthBought: "&aHai acquistato la vita massima del pet livello &b%level% &7(%HP% HP) &aa &b%currency%%cost%"
   invalidPetName: "&cNome del pet non valido! Non può contenere più di %max_chars% caratteri."
   containsBlWord: "&cIl nome del tuo pet non può contenere la parola &6'{bl_word}'&c!"
   petRenamed: "&aPet rinominato correttamente! Nome attuale: %pet_name%"
@@ -279,4 +281,4 @@ Alerts:
     petDeletedOthers: "&aHai eliminato il pet di %target%!"
 
 ## Non toccare ##
-LangVersion: 3.2
+LangVersion: 3.3

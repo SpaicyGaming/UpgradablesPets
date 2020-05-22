@@ -79,6 +79,9 @@ MainSettings:
   # false -> when a player clicks on an empty slot the gui is not closed
   closeGuiOnEmptyClick: true
 
+  # Whether to open the GUI after an upgrade purchase
+  openGuiAfterUpgrade: true
+
   # Remove all potion effects on '/pet away'
   removeEffectsOnPetAway: true
 
@@ -91,6 +94,9 @@ MainSettings:
   # True -> Send a message when a player tries to hurt someone else's pet. (only if 'canHitOthersPets' is true)
   sendCantHitOthersPetsMessage: true
 
+  # Prevent allies and faction members from hitting their pets (NOTE: overrides "canHitOthersPets")
+  factionsIntegration: true
+
   # Whether to send the "Alerts.petKilledbyPlayer" message to pet owners on "/pet killall"
   sendPetKilledMessage: true
 
@@ -98,7 +104,7 @@ MainSettings:
   blacklistedWorlds:
     - world_without_pets
 
-  # https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
+  # https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html
   petPurchaseDateFormat: "MM/dd/yy HH:mm"
 
   # How many levels will be added to the pet level for each upgrade (max health - potion effect)
@@ -107,10 +113,18 @@ MainSettings:
   # Whether pets should take fall damage (true -> fall damage disabled)
   disableFallDamage: true
 
+  # Prevent splash potion effects from being applied to pets
+  petSplashPotion:
+    # true -> don't apply splashed potions to pets
+    disable: true
+    # Effects that are applied to pets even if the above option is enabled
+    # Latest spigot PotionEffectTypes: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html
+    whitelist: []
+
   Sheep:
     # Prevent sheep from eating grass
     preventGrassEating: true
-    # All available colors (for 1.12.2): https://hub.spigotmc.org/javadocs/spigot/org/bukkit/DyeColor.html
+    # All available colors (for the latest spigot release): https://hub.spigotmc.org/javadocs/spigot/org/bukkit/DyeColor.html
     defaultColor: WHITE
 
   RainbowSheep:
@@ -346,6 +360,11 @@ PotionsEffects:
     slot: 34
     levelsCosts:
       1: 1500
+  damage_resistance:
+    active: false
+    slot: 35
+    levelsCosts:
+      1: 3000
 
 #
 # LEADERHEADS INTEGRATION
@@ -377,4 +396,4 @@ Leaderboards:
 NotifyUpdates: true
 
 ### DO NOT TOUCH ###
-ConfigVersion: 3.2
+ConfigVersion: 3.4
