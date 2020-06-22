@@ -110,8 +110,14 @@ MainSettings:
   # How many levels will be added to the pet level for each upgrade (max health - potion effect)
   increasePetLevel: 5
 
-  # Whether pets should take fall damage (true -> fall damage disabled)
-  disableFallDamage: true
+  # Prevent pets from getting damage of any of the listed causes
+  # Latest spigot version DamageCauses list: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html
+  disablePetDamageCauses:
+    - DROWNING
+    - FALL
+    - FIRE
+    - FIRE_TICK
+    - LAVA
 
   # Prevent splash potion effects from being applied to pets
   petSplashPotion:
@@ -396,4 +402,4 @@ Leaderboards:
 NotifyUpdates: true
 
 ### DO NOT TOUCH ###
-ConfigVersion: 3.4
+ConfigVersion: 3.5
