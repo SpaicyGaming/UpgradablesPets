@@ -21,6 +21,7 @@ HelpMenu:
     - "&b/pet here &7-> &6Teletrasporta il tuo pet da te"
     - "&b/pet away &7-> &6Despawna il tuo pet"
     - "&b/pet info &7-> &6Mostra info sul tuo pet"
+    - "&b/pet change &7-> &6Cambia tipo di pet"
     - "&b/pet delete &7-> (!) Elimina permanentemente il tuo pet"
     - ""
   staff:
@@ -125,6 +126,11 @@ MainGui:
       - "&bHai raggiunto il livello massimo"
       - "&bper l'effetto %effect%&r&b!"
       - "&aLivello attuale: &7%current_lvl%"
+ChangePetGui:
+  title: "&3Cambia pet"
+  lores:
+    - ""
+    - "&aClicca per selezionare questo &bPet"
 ConfirmGui:
   # Confirm pet purchase
   confirmPetPurchase:
@@ -164,6 +170,15 @@ ConfirmGui:
       - ""
       - "&cLivello attuale: &7%currLevel%"
       - "&aCosto: &7%currency%%cost%"
+
+  # Confirma cambio pet
+  confirmPetChange:
+    title: "&aConfirma Cambio Pet"
+    name: "&6Seleziona &b%petType%"
+    lore:
+      - ""
+      - "&7Clicca l'item a sinistra per"
+      - "&7selezionare questo pet!"
 
   buyItem:
     name: "&aAcquista!"
@@ -239,14 +254,15 @@ Alerts:
   signPlaced: "&aCartello di tipo '&b%petType%&a' piazzato correttamente!"
   signBroken: "&aCartello di tipo '&b%petType%&a' rotto correttamente!"
   invalidPetType: "&cIl pet type '&b%type%&c' non esiste"
+  petChanged: "&aHai cambiato il tuo pet con {pet_name}"
   petDeleted: "&aHai eliminato permanentemente il tuo pet!"
   petDeletedByOthers: "&cIl tuo pet è stato permanentemente eliminato da un amministratore!"
   permissions:
     noPerms: "&cMi dispiace, non hai il permesso"
-    noChangePerms: "&cNon hai il permesso di cambiare il tuo pet!"
     noKillPerms: "&cNon hai il permesso di uccidere un pet"
     noKillallPerms: "&cNon hai il permesso di uccidere tutti i pets"
     noDeletePerms: "&cNon hai il permesso di eliminare il tuo pet"
+    noChangePerms: "&cNon hai il permesso di cambiare il tuo pet!"
     noForcerespawnOwnPerms: "&cNon hai il permesso di forzare il respawn del tuo pet"
     noForcerespawnOthersPerms: "&cNon hai il permessi di forzare il respawn dei pet di altri players"
     noCountPerms: "&cNon hai il permesso di contare tutti i pets online"
@@ -255,7 +271,7 @@ Alerts:
     noRenameColorPerms: "&cNon hai il permesso di usare colori nel nome del tuo pet!"
     noGivePerms: "&cNon hai il permesso di givvare pets!"
     noReloadPerms: "&cNon hai il permesso di ricaricare i files di configurazione!"
-    noVip: "&cNon hai il permesso di acquistare il pet %pet%&c, è riservato ai vips!"
+    noVip: "&cNon hai il permesso di selezionare il pet %pet%&c, è riservato ai vips!"
     noSignPlace: "&cNon hai il permesso di piazzare pet signs"
     noSignBreak: "&cNon hai il permesso di rompere pet signs"
   staff:
@@ -281,4 +297,4 @@ Alerts:
     petDeletedOthers: "&aHai eliminato il pet di %target%!"
 
 ## Non toccare ##
-LangVersion: 3.3
+LangVersion: 3.4
