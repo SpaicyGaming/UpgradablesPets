@@ -33,6 +33,7 @@ HelpMenu:
     - "&b/pet buypet <petType> &7-> Read the wiki for info on this command"
     - "&b/pet kill <player> &7-> Kill player's pet"
     - "&b/pet killall &7-> Kill all pets"
+    - "&b/pet away <player> &7-> Send player's pet away"
     - "&b/pet forcerespawn <player> &7-> Force respawn player's pet"
     - "&b/pet give <player> <petType> &7-> Set player's pet"
     - "&b/pet delete <player> &7-> Permanently delete player's pet"
@@ -58,6 +59,7 @@ PetInfoFormat:
   - "&cPet Max Health: &7{pet_health_max} HP"
   - ""
   - "&cTotal Cost: &7{currency}{pet_total_cost}"
+  - "&cType changes count: &7{type_changes_count}"
   - "&cPurchase Date: &7{pet_purchase_date}"
 
 #
@@ -82,6 +84,7 @@ MainGui:
       - "&cType: &7%type%"
       - ""
       - "&cTotal Cost: &7%currency%%total_cost%"
+      - "&cType changes count: &7%type_changes_count%"
       - "&cPurchase Date: &7%purchase_date%"
   petHereItem:
     name: "&fTeleport here %petname%"
@@ -106,6 +109,13 @@ MainGui:
     maxLevelReached:
       - ""
       - "&cYou reached the max health level &7(lvl %currLevel%)"
+  petChangeItem:
+    name: "&5Change Pet Type"
+    lores:
+      - ""
+      - "&cClick to change your pet type"
+      - ""
+      - "&cChanges left: &7{changes_left}"
   potions:
     # PlaceHolders:
     # %effect% => Effect name
@@ -181,10 +191,10 @@ ConfirmGui:
       - "&7to select this pet!"
 
   buyItem:
-    name: "&aBuy!"
+    name: "&aConfirm!"
     lores:
       - ""
-      - "&aClick to buy"
+      - "&aClick to confirm"
 
   backItem:
     name: "&4Cancel"
@@ -225,6 +235,7 @@ PlaceholdersHook:
   false: "&cNo"
 #
 # MESSAGES
+# You can disable a message by removing its content (example: "")
 #
 Alerts:
   hasNotPet: "&cYou don't have a pet"
@@ -254,7 +265,8 @@ Alerts:
   signPlaced: "%petType% &atype sign correctly placed!"
   signBroken: "%petType% &atype sign correctly broken!"
   invalidPetType: "&cThe pet type '&b%type%&c' does not exist"
-  petChanged: "&aYou changed your pet with {pet_name}"
+  petChanged: "&aYou changed your pet with {pet_name}. &7(You can change it {changes_left} time(s) more)"
+  maxPetTypeChanges: "&cYou can't change your pet type. You where allowed to change it &b{pet_type_changes_count} &ctimes only"
   petDeleted: "&aYou deleted your pet!"
   petDeletedByOthers: "&cYour pet has been deleted by a server administrator!"
   permissions:
@@ -286,6 +298,9 @@ Alerts:
     petKilledOther: "&aYou killed {target}'s pet!"
     noKillOwn: "&cYou can't kill your own pet using this command!"
     noKillOther: "&cYou can't kill {target}'s pet!"
+    petAwayOtherAlready: "&c{target}'s pet is already away!"
+    petAwayOtherDead: "&c{target}'s pet is dead"
+    petAwayOtherSuccess: "&aYou sent &b{target}&a's pet away"
     petsCounter: "&6There are &b%count% &6pets online."
     petsCounterWorld: "&6There are &b{count} &6pets in the world &b{world}."
     noGiveYourself: "&cYou can't give a pet to yourself using this command!"
@@ -298,4 +313,4 @@ Alerts:
     petDeletedOthers: "&aYou deleted %target%'s pet!"
 
 ## Do not touch ##
-LangVersion: 3.4
+LangVersion: 3.6

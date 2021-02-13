@@ -33,6 +33,7 @@ HelpMenu:
     - "&b/pet buypet <petType> &7-> Leggi la wiki per info su questo comando"
     - "&b/pet kill <player> &7-> Uccidi il per del player"
     - "&b/pet killall &7-> Uccidi tutti i pets"
+    - "&b/pet away <player> &7-> Despawna il pet del player"
     - "&b/pet forcerespawn <player> &7-> Forza il respawn del pet del player"
     - "&b/pet give <player> <petType> &7-> Imposta il player del pet"
     - "&b/pet delete <player> &7-> Elimina permanentemente il pet del player"
@@ -58,6 +59,7 @@ PetInfoFormat:
   - "&cVita Massima: &7{pet_health_max} HP"
   - ""
   - "&cValore totale: &7{currency}{pet_total_cost}"
+  - "&cCambi di tipo fatti: &7{type_changes_count}"
   - "&cData Acquisto: &7{pet_purchase_date}"
   -
 #
@@ -82,6 +84,7 @@ MainGui:
       - "&cTipo: &7%type%"
       - ""
       - "&cValore totale: &7%currency%%total_cost%"
+      - "&cCambi di tipo fatti: &7%type_changes_count%"
       - "&cData Acquisto: &7%purchase_date%"
   petHereItem:
     name: "&fTeletrasporta qui %petname%"
@@ -106,6 +109,13 @@ MainGui:
     maxLevelReached:
       - ""
       - "&cHai raggiunto il livello massimo &7(lvl %currLevel%)"
+  petChangeItem:
+    name: "&5Cambia Pet"
+    lores:
+      - ""
+      - "&cClicca per cambiare il tipo del tuo pet"
+      - ""
+      - "&cCambi rimanenti: &7{changes_left}"
   potions:
     # PlaceHolders:
     # %effect% => Nome dell'effetto
@@ -181,10 +191,10 @@ ConfirmGui:
       - "&7selezionare questo pet!"
 
   buyItem:
-    name: "&aAcquista!"
+    name: "&aConferma"
     lores:
       - ""
-      - "&aClicca per acquistare"
+      - "&aClicca per confermare"
 
   backItem:
     name: "&4Annulla"
@@ -225,6 +235,7 @@ PlaceholdersHook:
   false: "&cNo"
 #
 # MESSAGGI
+# Puoi disabilitare un messaggio togliendo il suo contenuto (esempio: "")
 #
 Alerts:
   hasNotPet: "&cNon hai un pet"
@@ -254,7 +265,8 @@ Alerts:
   signPlaced: "&aCartello di tipo '&b%petType%&a' piazzato correttamente!"
   signBroken: "&aCartello di tipo '&b%petType%&a' rotto correttamente!"
   invalidPetType: "&cIl pet type '&b%type%&c' non esiste"
-  petChanged: "&aHai cambiato il tuo pet con {pet_name}"
+  petChanged: "&aHai cambiato il tuo pet con {pet_name}. &7(Cambi rimanenti: {changes_left})"
+  maxPetTypeChanges: "&cNon puoi cambiare il tuo pet. Potevi cambiarlo per un massimo di &b{pet_type_changes_count} &cvolte"
   petDeleted: "&aHai eliminato permanentemente il tuo pet!"
   petDeletedByOthers: "&cIl tuo pet è stato permanentemente eliminato da un amministratore!"
   permissions:
@@ -286,9 +298,13 @@ Alerts:
     petKilledOther: "&aHai ucciso il pet di {target}!"
     noKillOwn: "&cNon puoi uccidere il tuo stesso pet tramite questo comando!"
     noKillOther: "&cNon puoi uccidere il pet di {target}!"
+    petAwayOtherAlready: "&cIl pet di {target} è già away!"
+    petAwayOtherDead: "&cIl pet di {target} è morto"
+    petAwayOtherSuccess: "&aHai teletrasportato via il pet di &b{target}"
     petsCounter: "&6Ci sono &b%count% &6pets online."
     petsCounterWorld: "&6Ci sono &b{count} &6pets nel mondo &b{world}."
     noGiveYourself: "&cNon puoi givvarti da solo un pet tramite questo comando!"
+    petGiveSuccess: "&aHai dato &b{target} &aun pet &b{type} &acon successo!"
     petForceRespawnNotDeadOthers: "&cIl pet di {target} non è morto"
     petForceRespawnNotDeadOwn: "&cIl tuo pet non è morto!"
     petsDespawned: "&aHai despawnato tutti i pets!"
@@ -297,4 +313,4 @@ Alerts:
     petDeletedOthers: "&aHai eliminato il pet di %target%!"
 
 ## Non toccare ##
-LangVersion: 3.4
+LangVersion: 3.6
