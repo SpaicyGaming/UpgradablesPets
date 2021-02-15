@@ -141,6 +141,8 @@ ChangePetGui:
   lores:
     - ""
     - "&aClick to select this &bpet type"
+    - ""
+    - "&cChange fee: &7{currency}{change_fee}"
 ConfirmGui:
   # Confirm pet purchase
   confirmPetPurchase:
@@ -189,6 +191,8 @@ ConfirmGui:
       - ""
       - "&7Click the green item"
       - "&7to select this pet!"
+      - ""
+      - "&cChange fee: &7{currency}{change_fee}"
 
   buyItem:
     name: "&aConfirm!"
@@ -265,7 +269,7 @@ Alerts:
   signPlaced: "%petType% &atype sign correctly placed!"
   signBroken: "%petType% &atype sign correctly broken!"
   invalidPetType: "&cThe pet type '&b%type%&c' does not exist"
-  petChanged: "&aYou changed your pet with {pet_name}. &7(You can change it {changes_left} time(s) more)"
+  petChanged: "&aYou changed your pet with {pet_name} for {currency}{fee}. &7(You can change it {changes_left} time(s) more)"
   maxPetTypeChanges: "&cYou can't change your pet type. You where allowed to change it &b{pet_type_changes_count} &ctimes only"
   petDeleted: "&aYou deleted your pet!"
   petDeletedByOthers: "&cYour pet has been deleted by a server administrator!"

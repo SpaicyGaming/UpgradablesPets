@@ -177,6 +177,8 @@ PetsCost:
     # If you change the name, "purchase pet" signs you created before won't work anymore
     name: "&bCow"
     price: 500
+    # How much players get charged when they change to this pet type. This is optional. Delete to disable
+    typeChangeFee: 50
     # You can add/remove all the levels you want, except the level "1"
     maxHealth:
       # The default max health level
@@ -194,6 +196,7 @@ PetsCost:
     forVips: false
     name: "&dPig"
     price: 400
+    typeChangeFee: 40
     maxHealth:
       1:
         value: 7.0
@@ -209,6 +212,7 @@ PetsCost:
     forVips: false
     name: "&fSheep"
     price: 450
+    typeChangeFee: 45
     maxHealth:
       1:
         value: 7.0
@@ -224,6 +228,7 @@ PetsCost:
     forVips: false
     name: "&6Chicken"
     price: 600
+    typeChangeFee: 60
     maxHealth:
       1:
         value: 7.0
@@ -239,6 +244,7 @@ PetsCost:
     forVips: false
     name: "&aOcelot"
     price: 700
+    typeChangeFee: 70
     maxHealth:
       1:
         value: 10.0
@@ -254,6 +260,7 @@ PetsCost:
     forVips: false
     name: "&3Slime"
     price: 650
+    typeChangeFee: 65
     maxHealth:
       1:
         value: 7.0
@@ -269,6 +276,7 @@ PetsCost:
     forVips: false
     name: "&7Wolf"
     price: 500
+    typeChangeFee: 50
     maxHealth:
       1:
         value: 7.0
@@ -284,6 +292,7 @@ PetsCost:
     forVips: false
     name: "&cMushroom Cow"
     price: 800
+    typeChangeFee: 80
     maxHealth:
       1:
         value: 8.0
@@ -299,6 +308,7 @@ PetsCost:
     forVips: false
     name: "&7Silverfish"
     price: 1000
+    typeChangeFee: 100
     maxHealth:
       1:
         value: 5.0
@@ -314,6 +324,7 @@ PetsCost:
     forVips: true
     name: "&5Ra&6in&3bow &cSh&beep"
     price: 2000
+    typeChangeFee: 200
     maxHealth:
       1:
         value: 12.0
@@ -416,4 +427,4 @@ Leaderboards:
 NotifyUpdates: true
 
 ### DO NOT TOUCH ###
-ConfigVersion: 4.0
+ConfigVersion: 4.1

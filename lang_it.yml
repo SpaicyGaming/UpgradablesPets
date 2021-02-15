@@ -141,6 +141,8 @@ ChangePetGui:
   lores:
     - ""
     - "&aClicca per selezionare questo &bPet"
+    - ""
+    - "&cCosto: &7{currency}{change_fee}"
 ConfirmGui:
   # Confirm pet purchase
   confirmPetPurchase:
@@ -189,6 +191,8 @@ ConfirmGui:
       - ""
       - "&7Clicca l'item a sinistra per"
       - "&7selezionare questo pet!"
+      - ""
+      - "&cCosto: &7{currency}{change_fee}"
 
   buyItem:
     name: "&aConferma"
@@ -265,7 +269,7 @@ Alerts:
   signPlaced: "&aCartello di tipo '&b%petType%&a' piazzato correttamente!"
   signBroken: "&aCartello di tipo '&b%petType%&a' rotto correttamente!"
   invalidPetType: "&cIl pet type '&b%type%&c' non esiste"
-  petChanged: "&aHai cambiato il tuo pet con {pet_name}. &7(Cambi rimanenti: {changes_left})"
+  petChanged: "&aHai cambiato il tuo pet con {pet_name} per {currency}{fee}. &7(Cambi rimanenti: {changes_left})"
   maxPetTypeChanges: "&cNon puoi cambiare il tuo pet. Potevi cambiarlo per un massimo di &b{pet_type_changes_count} &cvolte"
   petDeleted: "&aHai eliminato permanentemente il tuo pet!"
   petDeletedByOthers: "&cIl tuo pet è stato permanentemente eliminato da un amministratore!"
